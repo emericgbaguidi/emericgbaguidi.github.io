@@ -338,7 +338,7 @@ span.year {
 
 #content ol {
   list-style: none;
-  counter-reset: publi 2;
+  counter-reset: publi 3;
   /*counter-reset: publi;*/
 }
 
