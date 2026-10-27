@@ -1,128 +1,1003 @@
-<!DOCTYPE HTML>
-<!--
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Eméric Gbaguidi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eméric Gbaguidi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-			<!-- Header -->
-				<div id="header">
+    /* ─── Light-mode tokens (default) ────────────────────── */
+    :root {
+      --navy:    #0f1f38;
+      --gold:    #c0933a;
+      --gold2:   #daa84e;
+      --bg:      #f8f4ef;
+      --surface: #ffffff;
+      --text:    #1a2535;
+      --muted:   #5a6a7e;
+      --border:  #ddd6cc;
+      --accent:  #2c5f8a;
+      --accent2: #e8f0f8;
+      --radius:  6px;
+      --shadow:  0 4px 24px rgba(15,31,56,.08);
 
-					<!-- Logo -->
-						<span class="logoimage"><img src="images/pic13.jpg" alt="" title="Un volcan peut en cacher un autre" /></span>
-						<h1><a href="index.html" id="logo">Eméric Gbaguidi </a><br /> <em>PhD student in Applied Mathematics</em></h1>
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-                                <li class="current"><a href="index.html">HOME</a></li>
-								<li><a href="research.html"> RESEARCH</a></li>
-                                <li><a href="teaching.html">TEACHING</a></li>
-                                <li><a href="softwares.html">SOFTWARES</a></li>
-							</ul>
-						</nav>
+      /* pub-status badges */
+      --pub-ok-bg:   #e8f4ec; --pub-ok-fg:   #2a7a45;
+      --pub-fc-bg:   #fef3e2; --pub-fc-fg:   #9a6800;
+      --pub-sub-bg:  #eef2fb; --pub-sub-fg:  #3359a8;
+      --pub-pre-bg:  #f3eeff; --pub-pre-fg:  #6b40b8;
 
-				</div>
+      /* level badges */
+      --lvl-l1-bg: #fff3e0; --lvl-l1-fg: #e65100;
+      --lvl-l2-bg: #fffde0; --lvl-l2-fg: #9a6800;
+      --lvl-l3-bg: #e7ffe0; --lvl-l3-fg: #3359a8;
+      --lvl-m1-bg: #e8f4ec; --lvl-m1-fg: #2e7d32;
+    }
 
-			<!-- Main -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-narrower">
-								<div id="sidebar">
+    /* ─── Dark-mode tokens ────────────────────────────────── */
+    [data-theme="dark"] {
+      --bg:      #111827;
+      --surface: #1a2535;
+      --text:    #cdd7e8;
+      --muted:   #7e93ad;
+      --border:  #2a3d55;
+      --accent:  #5b9dd4;
+      --accent2: #172840;
 
-									<!-- Sidebar -->
+      --pub-ok-bg:   #0e2318; --pub-ok-fg:   #5fb87a;
+      --pub-fc-bg:   #261e08; --pub-fc-fg:   #d4a040;
+      --pub-sub-bg:  #0e1930; --pub-sub-fg:  #6b8fd4;
+      --pub-pre-bg:  #160f2e; --pub-pre-fg:  #9b72e0;
 
-										<section>
-                                            <span class="image featured"><img src="images/01.jpg" alt="" /></span>
-											<p><b>Email</b>: thierry-emeric.gbaguidi@math.u-bordeaux.fr<br /> 
-                                                <b>Address</b>: Bureau 202a, Bâtiment A33<br />
-                                                351, Cours de la Libération<br /> 
-                                                33405 TALENCE<br /> 
-                                                <a target="_blank" href="https://www.math.u-bordeaux.fr/">Institut de Mathématiques de Bordeaux</a><br /> 
-                                                <a target="_blank" href="https://www.u-bordeaux.fr/">Université de Bordeaux</a>
-                                                
-                                                
-                                            </p>
-										</section>
+      --lvl-l1-bg: #2a1a08; --lvl-l1-fg: #e8894a;
+      --lvl-l2-bg: #33300c; --lvl-l2-fg: #d4a040;
+      --lvl-l3-bg: #16380c; --lvl-l3-fg: #8fdb8f;
+      --lvl-m1-bg: #103d26; --lvl-m1-fg: #5fb87a;
+    }
 
+    /* ─── Base ────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.7; transition: background .25s, color .25s;
+    }
 
-								</div>
-							</div>
-							<div class="col-8  col-12-narrower imp-narrower">
-								<div id="content">
+    /* ─── Typography ──────────────────────────────────────── */
+    h1,h2,h3,h4 { font-family: 'EB Garamond', Georgia, serif; font-weight: 500; line-height: 1.2; }
+    h2 { font-size: 2rem; color: var(--text); }
+    h3 { font-size: 1.15rem; color: var(--text); }
+    p  { color: var(--text); }
+    a  { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--gold); }
+    em { font-style: italic; }
 
-									<!-- Content -->
-										<article>
-											<h3><i class="fas fa-circle-user"></i>About me </h3>
-											<p>
-												I am currently a PhD student in Applied Mathematics at 
-												<a target="_blank" href="https://www.math.u-bordeaux.fr/">Institut de Mathématiques de Bordeaux (IMB)</a>
-												under the supervision of <a target="_blank" href="https://bernardbercu.wordpress.com/">Bernard Bercu</a> and 
-												<a target="_blank" href="https://luis-fredes.perso.math.cnrs.fr/">Luis Fredes</a>. <br /> 
-												My research interests are stochastic algorithms, martingale theory, stochastic optimization, especially, my thesis is about the stochastic 
-                                                algorithms in high dimensional with applications in statistical learning.
-											</p>
-                                            <h3><i class="fas fa-graduation-cap"></i>Education</h3>
-											<p id="cv"> 
-												<span class="date">Since september 2024 :</span class="date"> PhD in Applied Mathematics, <span class="infos">Université de Bordeaux (IMB)</span><br>
-												<span class="date">2022-2024:</span class="date"> Master in Statistical and Stochastic Modeling, <span class="infos">Université de Bordeaux</span><br>
-												<span class="date">2018 - 2021 :</span class="date"> Student in Applied Statistics, <span class="infos">Université de Parakou, Bénin</span>
-											</p>
-											<strong>Detailed CV</strong>
-											<footer class="cv-buttons">
-												<a href="CVs/cv_french.pdf" class="button">French version (updated 01/2026)</a>
-												<a href="CVs/cv_english.pdf" class="button">English version (updated 01/2026)</a>
-											</footer>
-										</article>
+    /* ─── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,31,56,.97);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem 2rem;
+    }
+    .nav-brand {
+      font-family: 'EB Garamond', serif; font-size: 1.2rem; font-weight: 500;
+      color: #fff; letter-spacing: .02em; flex-shrink: 0;
+    }
+    .nav-brand span { color: var(--gold2); }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.7); font-size: .82rem;
+      font-weight: 500; letter-spacing: .05em; text-transform: uppercase;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold2); }
 
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+    /* ── Theme toggle ── */
+    #theme-toggle {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.8); font-size: 1rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s, transform .2s;
+      flex-shrink: 0; margin-left: 1.5rem;
+    }
+    #theme-toggle:hover { background: rgba(255,255,255,.15); border-color: var(--gold2); transform: rotate(20deg); }
 
-			<!-- Footer -->
-				<div id="footer">
+    /* ─── Sections ────────────────────────────────────────── */
+    section { padding: 5rem 2rem; }
+    section.alt-bg { background: var(--surface); }
+    .container { max-width: 1100px; margin: 0 auto; }
 
-					<!-- Icons -->
-						<ul class="icons">
-							<li><a href="https://github.com/emericgbaguidi?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=qOuubDQAAAAJ&hl=fr&oi=ao" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
-						</ul>
+    .section-header { margin-bottom: 2.5rem; }
+    .section-label {
+      font-size: .7rem; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--gold); font-weight: 600; margin-bottom: .5rem;
+    }
+    .divider {
+      width: 3rem; height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      border-radius: 2px; margin-top: .75rem;
+    }
 
-					<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-						<div id="last_update"> 
-							<p><i class="fas fa-wrench"></i>Last update : 28/01/2026</p>
-						</div>
+    /* ─── ABOUT (merged) ──────────────────────────────────── */
+    #about {
+      background: var(--bg);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
 
-				</div>
+    #about .section-label { color: var(--accent); }
+    #about h2 { color: var(--text); }
+    #about .divider { background: linear-gradient(90deg, var(--gold), transparent); }
 
-		</div>
+    /* Two-column layout: sidebar | content */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 4rem;
+      position: relative;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* ── Sidebar ── */
+    .about-sidebar {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 0;
+    }
+    .profile-photo {
+      width: 330px; height: 360px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 0 7px rgba(192,147,58,.15), 0 12px 40px rgba(0,0,0,.4);
+      object-fit: cover; object-position: center top;
+      display: block; margin-bottom: 1.3rem;
+    }
+    .profile-name {
+      font-family: 'EB Garamond', serif; font-size: 1.6rem;
+      font-weight: 500; color: var(--text); line-height: 1.15; margin-bottom: .4rem;
+    }
+    .profile-title {
+      font-size: .82rem; color: var(--accent); font-weight: 500;
+      letter-spacing: .04em; text-transform: uppercase;
+      margin-bottom: .35rem;
+    }
+    .profile-inst {
+      font-size: .82rem; color: var(--muted);
+      margin-bottom: 1.5rem; line-height: 1.5;
+    }
+    .cv-btns { display: flex; flex-direction: column; gap: .6rem; width: 100%; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: .6rem 1.2rem; border-radius: var(--radius);
+      font-size: .83rem; font-weight: 500; transition: all .2s; text-align: center;
+    }
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-primary:hover { background: var(--gold2); color: var(--navy); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; border: 1.5px solid var(--border);
+      color: var(--muted);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
-	</body>
+    .sidebar-links {
+      display: flex; justify-content: center; gap: .6rem;
+      flex-wrap: wrap; margin-top: 1.2rem;
+    }
+    .sidebar-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .4rem .85rem; border-radius: 20px;
+      font-size: .78rem; font-weight: 500;
+      background: var(--accent2);
+      border: 1px solid var(--border);
+      color: var(--accent); transition: all .2s;
+    }
+    .sidebar-link:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+    /* ── Content ── */
+    .about-content {}
+    .about-content p {
+      color: var(--text); font-size: 1rem;
+      margin-bottom: 1.1rem; line-height: 1.8;
+    }
+    .about-content a { color: var(--accent); }
+    .about-content a:hover { color: var(--gold); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.4rem; }
+    .tag {
+      padding: .35rem .85rem; border-radius: 20px; font-size: .8rem; font-weight: 500;
+      background: var(--accent2); color: var(--accent);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Info cards row (below the two columns) ── */
+    .about-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 3.5rem; position: relative;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.6rem;
+    }
+    .info-card h3 { font-size: .95rem; margin-bottom: 1.1rem; color: var(--text); }
+    .info-row {
+      display: flex; gap: .75rem; align-items: flex-start; margin-bottom: .9rem;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-icon {
+      width: 30px; height: 30px; flex-shrink: 0;
+      background: var(--accent2); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; font-size: .9rem;
+    }
+    .info-row div { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+    .info-row div strong { color: var(--text); display: block; font-weight: 500; margin-bottom: .1rem; }
+    .info-row a { color: var(--accent); font-size: .82rem; }
+    .info-row a:hover { color: var(--gold); }
+
+    /* Education timeline inside card */
+    .edu-timeline { position: relative; padding-left: 1.5rem; }
+    .edu-timeline::before {
+      content: ''; position: absolute; left: 0; top: 6px; bottom: 0;
+      width: 2px; background: linear-gradient(180deg, var(--gold), transparent);
+      border-radius: 1px;
+    }
+    .edu-item { position: relative; margin-bottom: 1.3rem; }
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-item::before {
+      content: ''; position: absolute;
+      left: -1.65rem; top: 5px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--gold); border: 2px solid var(--surface);
+    }
+    .edu-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .73rem; color: var(--gold); font-weight: 500;
+      letter-spacing: .03em; margin-bottom: .2rem;
+    }
+    .edu-title-text { font-family: 'EB Garamond', serif; font-size: 1rem; color: var(--text); }
+    .edu-place { font-size: .8rem; color: var(--muted); margin-top: .1rem; }
+
+    /* ─── Publications toolbar ───────────────────────────────────────── */
+    .pub-toolbar {
+      display: flex; flex-wrap: wrap; gap: .85rem; align-items: center;
+      margin-bottom: .7rem;
+    }
+    .pub-search-wrap { position: relative; flex: 1; min-width: 220px; }
+    .pub-search-icon {
+      position: absolute; left: .85rem; top: 50%; transform: translateY(-50%);
+      font-size: .9rem; pointer-events: none; opacity: .5;
+    }
+    #pub-search {
+      width: 100%; padding: .6rem .9rem .6rem 2.4rem;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); color: var(--text);
+      font-family: inherit; font-size: .88rem;
+      transition: border-color .2s, box-shadow .2s; outline: none;
+    }
+    #pub-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent2); }
+    .pub-filters { display: flex; gap: .6rem; flex-shrink: 0; }
+    .pub-filters select {
+      padding: .6rem .9rem; border: 1.5px solid var(--border);
+      border-radius: var(--radius); background: var(--surface); color: var(--text);
+      font-family: inherit; font-size: .85rem; cursor: pointer;
+      transition: border-color .2s; outline: none; appearance: auto;
+    }
+    .pub-filters select:focus { border-color: var(--accent); }
+    .pub-count {
+      font-size: .8rem; color: var(--muted); font-style: italic;
+      margin-bottom: 1.4rem; letter-spacing: .01em;
+    }
+    mark { background: rgba(192,147,58,.28); color: inherit; border-radius: 2px; padding: 0 .1em; }
+    .pub-empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
+
+    /* ─── Publications ────────────────────────────────────── */
+    .pub-list { display: flex; flex-direction: column; gap: 1.4rem; }
+    .pub-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem 1.7rem;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .pub-card:hover { box-shadow: var(--shadow); border-color: var(--accent); }
+    .pub-status {
+      display: inline-block; font-size: .7rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: .2rem .7rem; border-radius: 20px; margin-bottom: .75rem;
+    }
+    .pub-status.published   { background: var(--pub-ok-bg);  color: var(--pub-ok-fg); }
+    .pub-status.forthcoming { background: var(--pub-fc-bg);  color: var(--pub-fc-fg); }
+    .pub-status.submitted   { background: var(--pub-sub-bg); color: var(--pub-sub-fg); }
+    .pub-status.preprint    { background: var(--pub-pre-bg); color: var(--pub-pre-fg); }
+    .pub-title {
+      font-family: 'EB Garamond', serif; font-size: 1.15rem;
+      color: var(--text); font-weight: 500; line-height: 1.4; margin-bottom: .35rem;
+    }
+    .pub-title-link {
+      color: inherit; text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color .2s, border-color .2s;
+    }
+    .pub-title-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .pub-authors { font-size: .87rem; color: var(--muted); margin-bottom: .3rem; }
+    .pub-authors strong { color: var(--text); }
+    .pub-venue { font-size: .87rem; color: var(--muted); font-style: italic; margin-bottom: .75rem; }
+    .pub-links { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .pub-link {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .78rem; font-weight: 500; color: var(--accent);
+      padding: .28rem .75rem; border-radius: 4px;
+      border: 1px solid rgba(44,95,138,.2); background: var(--accent2);
+      transition: all .2s;
+    }
+    .pub-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* ─── Talks ───────────────────────────────────────────── */
+    .talk-year-group { margin-bottom: 1.8rem; }
+    .talk-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .85rem; font-weight: 500; color: var(--gold);
+      letter-spacing: .08em; margin-bottom: .8rem;
+      padding-bottom: .4rem; border-bottom: 1px solid var(--border);
+    }
+    .talk-item {
+      display: flex; gap: 1.1rem; align-items: flex-start;
+      padding: .75rem 0; border-bottom: 1px dashed var(--border);
+    }
+    .talk-item:last-child { border-bottom: none; }
+    .talk-dot {
+      width: 7px; height: 7px; flex-shrink: 0;
+      background: var(--gold); border-radius: 50%; margin-top: .58rem;
+    }
+    .talk-name { font-size: .93rem; font-weight: 500; color: var(--text); }
+    .talk-place { font-size: .83rem; color: var(--muted); margin-top: .12rem; }
+
+    /* ─── Teaching ────────────────────────────────────────── */
+    .teaching-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; }
+    .teaching-table th {
+      font-size: .75rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--muted); font-weight: 600; padding: .55rem 1rem;
+      text-align: left; border-bottom: 2px solid var(--border);
+    }
+    .teaching-table td { padding: .85rem 1rem; font-size: .9rem; border-bottom: 1px solid var(--border); }
+    .teaching-table tr:last-child td { border-bottom: none; }
+    .teaching-table tr:hover td { background: var(--accent2); }
+    .level-badge {
+      display: inline-block; padding: .18rem .55rem;
+      border-radius: 4px; font-size: .73rem; font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .level-l1 { background: var(--lvl-l1-bg); color: var(--lvl-l1-fg); }
+    .level-l2 { background: var(--lvl-l2-bg); color: var(--lvl-l2-fg); }
+    .level-l3 { background: var(--lvl-l3-bg); color: var(--lvl-l3-fg); }
+    .level-m1 { background: var(--lvl-m1-bg); color: var(--lvl-m1-fg); }
+
+    /* ─── Contact ─────────────────────────────────────────── */
+    #contact { background: var(--navy); }
+    #contact .section-label { color: var(--gold2); }
+    #contact h2 { color: #fff; }
+    #contact .divider { background: linear-gradient(90deg, var(--gold2), transparent); }
+    .contact-grid {
+      max-width: 680px;
+    }
+    .contact-text { color: rgba(255,255,255,.65); margin-bottom: 1.3rem; }
+    .contact-links { display: flex; flex-direction: column; gap: .65rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 1rem;
+      padding: .95rem 1.3rem;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius); color: rgba(255,255,255,.85);
+      font-size: .88rem; transition: all .2s;
+    }
+    .contact-link:hover { background: rgba(255,255,255,.1); border-color: var(--gold2); color: var(--gold2); }
+    .contact-link .cl-icon { font-size: 1.05rem; }
+    .contact-link .cl-label { font-weight: 500; }
+    .contact-link .cl-value { font-size: .8rem; color: rgba(255,255,255,.45); margin-top: .04rem; }
+    .social-grid { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: 1.4rem; }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .55rem 1.1rem; border-radius: var(--radius);
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.8); font-size: .83rem; font-weight: 500; transition: all .2s;
+    }
+    .social-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+    /* ─── Footer ──────────────────────────────────────────── */
+    footer {
+      background: #080e1a; color: rgba(255,255,255,.3);
+      text-align: center; padding: 1.8rem 2rem; font-size: .8rem;
+    }
+    footer a { color: rgba(255,255,255,.4); }
+    footer a:hover { color: var(--gold2); }
+
+    /* ─── Responsive ──────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-sidebar { flex-direction: row; flex-wrap: wrap; text-align: left;
+                       align-items: flex-start; gap: 1.5rem; }
+      .profile-photo { width: 120px; height: 120px; margin-bottom: 0; }
+      .about-sidebar > div { flex: 1; min-width: 160px; }
+      .about-cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .nav-links    { display: none; }
+      .about-sidebar { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════ NAV ════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">E<span>.</span>G</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Research</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">☀️</button>
+  </div>
+</nav>
+
+<!-- ════════════════════════ ABOUT (merged) ═════════════════ -->
+<section id="about">
+  <div class="container">
+
+    <div class="about-layout">
+
+      <!-- ── Sidebar: photo + identity ── -->
+      <div class="about-sidebar">
+        <img
+          src="Images/Profil_Emeric.jpg"
+          alt="Eméric Gbaguidi"
+          class="profile-photo"
+        />
+        <div>
+          <div class="profile-name">Eméric Gbaguidi</div>
+          <div class="profile-title">PhD Student in Applied Mathematics</div>
+          <div class="profile-inst">
+            Institut de Mathématiques de Bordeaux<br>
+            Université de Bordeaux
+          </div>
+          <div class="cv-btns">
+            <a href="CVs/cv_english.pdf" class="btn btn-primary" target="_blank">
+              ↓ Download CV
+            </a>
+            <a href="CVs/cv_french.pdf" class="btn btn-ghost" target="_blank">
+              ↓ CV (français)
+            </a>
+          </div>
+          <div class="sidebar-links">
+            <a class="sidebar-link" href="https://github.com/emericgbaguidi?tab=repositories" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+              GitHub
+            </a>
+            <a class="sidebar-link" href="https://scholar.google.com/citations?user=qOuubDQAAAAJ&hl=fr&oi=ao" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+              Scholar
+            </a>
+            <a class="sidebar-link" href="https://www.math.u-bordeaux.fr/" target="_blank">
+              🏛 IMB
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Main content: bio + tags ── -->
+      <div class="about-content">
+        <div class="section-header" style="margin-bottom:1.8rem;">
+          <!--<div class="section-label">Introduction</div>-->
+          <h2>About</h2>
+          <div class="divider"></div>
+        </div>
+        <p>
+          I am currently a PhD student in applied mathematics at the
+          <a href="https://www.math.u-bordeaux.fr/" target="_blank">Institut de Mathématiques de Bordeaux (IMB)</a> of
+          <a href="https://www.u-bordeaux.fr/" target="_blank">Université de Bordeaux</a>.
+          My thesis, entitled <em>"Stochastic algorithms in high dimensions
+          with applications in statistical learning"</em>, is supervised by
+          <a href="https://bernardbercu.wordpress.com/qui-suis-je/" target="_blank">Bernard Bercu</a>
+          and <a href="https://luis-fredes.perso.math.cnrs.fr/" target="_blank">Luis Fredes</a>.
+        </p>
+        <p>
+          My research revolves around the convergence analysis of stochastic algorithms 
+          for optimization as well as their asymptotic properties
+          via notably martingale theory.
+        </p>
+       <!-- <p>
+          Prior to my PhD, I obtained a Master's degree in
+          <em>Statistical and Stochastic Modeling</em> at Université de Bordeaux (2022–2024),
+          following undergraduate studies in Applied Statistics at
+          Université de Parakou, Benin (2018–2021).
+        </p> -->
+        <div class="tags">
+          <span class="tag">Stochastic algorithms</span>
+          <span class="tag">Stochastic optimization</span>
+          <span class="tag">Martingale theory</span>
+          <span class="tag">Statistical learning</span>
+          <!-- <span class="tag">Stochastic gradient descent</span> -->
+          <!-- <span class="tag">High-dimensional statistics</span> -->
+        </div>
+
+        <!-- ── Info cards spanning full width ── -->
+        <div class="about-cards">
+          <div class="info-card">
+            <h3>🎓 Education</h3>
+            <div class="edu-timeline">
+              <div class="edu-item">
+                <div class="edu-period">Since Sept. 2024</div>
+                <div class="edu-title-text">PhD in Applied Mathematics</div>
+                <div class="edu-place">Université de Bordeaux</div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-period">2022 — 2024</div>
+                <div class="edu-title-text">MSc — Statistical and Stochastic Modeling</div>
+                <div class="edu-place">Université de Bordeaux</div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-period">2018 — 2021</div>
+                <div class="edu-title-text">BSc — Applied Statistics</div>
+                <div class="edu-place">Université de Parakou, Benin</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>📍 Contact &amp; Location</h3>
+            <div class="info-row">
+              <div class="info-icon">🏛</div>
+              <div>
+                <strong>Institut de Mathématiques de Bordeaux</strong>
+                Université de Bordeaux
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📬</div>
+              <div>
+                <strong>Office 202a, Building A33</strong>
+                351 Cours de la Libération<br>33405 Talence, France
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:thierry-emeric.gbaguidi@math.u-bordeaux.fr">
+                  thierry-emeric.gbaguidi@math.u-bordeaux.fr
+                </a>
+              </div>
+            </div>
+          </div>
+    
+        </div>    
+      </div>
+      
+    </div><!-- /.about-layout -->
+
+  </div>
+</section>
+
+<!-- ════════════════════════ PUBLICATIONS ═══════════════════ -->
+<section id="publications" class="alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Scientific work</div>
+      <h2>Publications &amp; Preprints</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Search & filter toolbar -->
+    <div class="pub-toolbar">
+      <div class="pub-search-wrap">
+        <span class="pub-search-icon">🔍</span>
+        <input id="pub-search" type="search" placeholder="Search by title, author, journal, or year…" autocomplete="off" />
+      </div>
+      <div class="pub-filters">
+        <select id="pub-filter-year">
+          <option value="">All years</option>
+        </select>
+        <select id="pub-filter-type">
+          <option value="">All types</option>
+          <option value="published">Published</option>
+          <option value="forthcoming">Forthcoming</option>
+          <option value="submitted">Submitted</option>
+          <option value="preprint">Preprint</option>
+        </select>
+      </div>
+    </div>
+    <div id="pub-count" class="pub-count"></div>
+
+    <div id="pub-list" class="pub-list"></div>
+  </div>
+</section>
+
+<!-- Pour les preprint: status    = {preprint} and note      = {Preprint} -->
+<script>
+/* ── Embedded BibTeX data (mirrors emeric_papers.bib) ─────────────────── */
+const BIB_RAW = `
+@article{gbaguidi2026accelerated,
+  author    = {Gbaguidi, Em\\'eric and Hermant, Julien},
+  title     = {Accelerated Stochastic Zeroth-Order Quasar-Convex Optimization},
+  year      = {2026},
+  status    = {submitted},
+  note      = {Submitted, 2026},
+  arxiv     = {https://arxiv.org/pdf/2607.19965}
+}
+
+@article{bercu2025hybrid,
+  author    = {Bercu, Bernard and Fredes, Luis and Gbaguidi, Em\\'eric},
+  title     = {A hybrid stochastic Newton algorithm for logistic regression},
+  year      = {2025},
+  status    = {submitted},
+  note      = {Submitted, 2025},
+  arxiv     = {https://arxiv.org/pdf/2512.01790}
+}
+
+@article{gbaguidi2025stochastic,
+  author    = {Gbaguidi, Em\\'eric},
+  title     = {A stochastic gradient descent algorithm with random search directions},
+  journal   = {Transactions on Machine Learning Research},
+  year      = {2025},
+  status    = {published},
+  url       = {https://openreview.net/pdf?id=npER8AaLSb},
+  urltype   = {OpenReview}
+}
+
+@article{bercu2024saga,
+  author    = {Bercu, Bernard and Fredes, Luis and Gbaguidi, Em\\'eric},
+  title     = {On the SAGA algorithm with decreasing step},
+  journal   = {SIAM Journal on Control and Optimization},
+  year      = {2024},
+  status    = {forthcoming},
+  hal       = {https://hal.science/hal-04716858v1},
+  arxiv     = {https://arxiv.org/pdf/2410.03760}
+}
+`;
+/* ── LaTeX entity decoder ─────────────────────────────────────────────── */
+function decodeLaTeX(s) {
+  return s
+    .replace(/\{\\['`^"~]([a-zA-Z])\}/g, (_, c) => c === 'e' ? 'é' : c === 'E' ? 'É' : c)
+    .replace(/\\'e/g, 'é').replace(/\\'E/g, 'É')
+    .replace(/\\['`^"~]([a-zA-Z])/g, '$1')
+    .replace(/[{}]/g, '');
+}
+
+/* ── BibTeX parser ────────────────────────────────────────────────────── */
+function parseBib(raw) {
+  const entries = [];
+  const entryRe = /@\w+\{([^,]+),([\s\S]*?)\n\}/g;
+  let m;
+  while ((m = entryRe.exec(raw)) !== null) {
+    const key = m[1].trim();
+    const body = m[2];
+    const fields = {};
+    // Handle nested braces in field values
+    const fieldRe = /(\w+)\s*=\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g;
+    let f;
+    while ((f = fieldRe.exec(body)) !== null) {
+      fields[f[1].trim().toLowerCase()] = decodeLaTeX(f[2].trim());
+    }
+    entries.push({ key, ...fields });
+  }
+  return entries;
+}
+
+/* ── Author formatting — full names, Gbaguidi always highlighted ──────── */
+function formatAuthors(raw) {
+  if (!raw) return '';
+  return raw.split(/\s+and\s+/).map(a => {
+    a = a.trim();
+    let full;
+    if (a.includes(',')) {
+      // "Last, First" → "First Last"
+      const [last, first] = a.split(',').map(s => s.trim());
+      full = first ? `${first} ${last}` : last;
+    } else {
+      full = a;
+    }
+    if (/gbaguidi/i.test(full)) return `<strong>Eméric Gbaguidi</strong>`;
+    return full;
+  }).join(', ');
+}
+
+/* ── Primary link for title href ──────────────────────────────────────── */
+function titleLink(p) {
+  return p.url || p.arxiv || p.hal || p.doi || null;
+}
+
+/* ── Venue line ───────────────────────────────────────────────────────── */
+function venueText(p) {
+  const status = (p.status || '').toLowerCase();
+  if (p.journal) {
+    if (status === 'forthcoming') return `<em>${p.journal}</em> (forthcoming)`;
+    return `<em>${p.journal}</em>, ${p.year || ''}`;
+  }
+  return p.note || (status === 'preprint' ? 'Preprint' : (p.year || ''));
+}
+
+/* ── Link buttons ─────────────────────────────────────────────────────── */
+function linksHtml(p) {
+  const btns = [];
+  if (p.url)   btns.push(`<a class="pub-link" href="${p.url}"   target="_blank">📄 ${p.urltype || 'Link'}</a>`);
+  if (p.hal)   btns.push(`<a class="pub-link" href="${p.hal}"   target="_blank">📄 HAL</a>`);
+  if (p.arxiv) btns.push(`<a class="pub-link" href="${p.arxiv}" target="_blank">📄 arXiv</a>`);
+  if (p.doi)   btns.push(`<a class="pub-link" href="${p.doi}"   target="_blank">🔗 DOI</a>`);
+  return btns.length ? `<div class="pub-links">${btns.join('')}</div>` : '';
+}
+
+/* ── Render ───────────────────────────────────────────────────────────── */
+// Default sort: most recent first
+const papers = parseBib(BIB_RAW).sort((a, b) => (b.year || 0) - (a.year || 0));
+
+const list    = document.getElementById('pub-list');
+const count   = document.getElementById('pub-count');
+const search  = document.getElementById('pub-search');
+const selYear = document.getElementById('pub-filter-year');
+const selType = document.getElementById('pub-filter-type');
+
+// Populate year filter from actual data
+const years = [...new Set(papers.map(p => p.year).filter(Boolean))].sort((a, b) => b - a);
+years.forEach(y => {
+  const o = document.createElement('option');
+  o.value = y; o.textContent = y;
+  selYear.appendChild(o);
+});
+
+function statusLabel(s) {
+  const map = { published:'Published', forthcoming:'Forthcoming', submitted:'Submitted', preprint:'Preprint' };
+  return map[s] || s;
+}
+
+function highlight(text, q) {
+  if (!q) return text;
+  const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(`(${esc})`, 'gi'), '<mark>$1</mark>');
+}
+
+function render() {
+  const q    = search.value.trim().toLowerCase();
+  const yr   = selYear.value;
+  const type = selType.value;
+
+  const filtered = papers.filter(p => {
+    if (yr   && p.year !== yr) return false;
+    if (type && (p.status || '').toLowerCase() !== type) return false;
+    if (q) {
+      const haystack = [p.title, p.author, p.journal, p.year, p.note]
+        .filter(Boolean).join(' ').toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+
+  count.textContent = `Showing ${filtered.length} of ${papers.length} item${papers.length !== 1 ? 's' : ''}`;
+
+  list.innerHTML = filtered.length ? filtered.map(p => {
+    const status  = (p.status || 'preprint').toLowerCase();
+    const href    = titleLink(p);
+    const rawTitle = highlight(p.title || '', q);
+    const titleHtml = href
+      ? `<a href="${href}" target="_blank" class="pub-title-link">${rawTitle}</a>`
+      : rawTitle;
+    const authors = formatAuthors(p.author || '');
+    const venue   = venueText(p);
+    return `
+      <div class="pub-card">
+        <span class="pub-status ${status}">${statusLabel(status)}</span>
+        <div class="pub-title">${titleHtml}</div>
+        <div class="pub-authors">${authors}</div>
+        <div class="pub-venue">${venue}</div>
+        ${linksHtml(p)}
+      </div>`;
+  }).join('') : `<p class="pub-empty">No publications match your search.</p>`;
+}
+
+search.addEventListener('input', render);
+selYear.addEventListener('change', render);
+selType.addEventListener('change', render);
+render();
+</script>
+
+<!-- ════════════════════════ TALKS ══════════════════════════ -->
+<section id="talks">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Scientific dissemination</div>
+      <h2>Talks &amp; Conferences</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="talk-year-group">
+      <div class="talk-year">2026</div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">17<sup>th</sup> French-Romanian Colloquium on Applied Mathematics</div>
+          <div class="talk-place">Institut Élie Cartan de Lorraine — Nancy</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">MAD-Stat Seminar</div>
+          <div class="talk-place">Toulouse School of Economics — Toulouse</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">7<sup>th</sup> annual workshop <em>ai4industry</em></div>
+          <div class="talk-place">Bordeaux INP — Bordeaux</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="talk-year-group">
+      <div class="talk-year">2025</div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">Journées de Probabilités</div>
+          <div class="talk-place">Institut de Mathématiques de Marseille — Marseille</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">Colloquium MARGAUx PhD Days 2025</div>
+          <div class="talk-place">La Rochelle</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="talk-year-group">
+      <div class="talk-year">2024</div>
+      <div class="talk-item">
+        <div class="talk-dot"></div>
+        <div>
+          <div class="talk-name">Journées de Probabilités</div>
+          <div class="talk-place">Institut de Mathématiques de Bordeaux — Bordeaux</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════ TEACHING ═══════════════════════ -->
+<section id="teaching" class="alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Education &amp; Pedagogy</div>
+      <h2>Teaching</h2>
+      <div class="divider"></div>
+    </div>
+    <p style="color:var(--muted); margin-bottom:1rem; font-size:.95rem;">
+      Université de Bordeaux (2024–2026) <!--Teaching assistant (TD) at -->
+    </p>
+    <table class="teaching-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Level</th>
+          <th>Responsibility</th>
+          <th>Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Algorithmes Stochastiques</td>
+          <td><span class="level-badge level-m1">M1</span></td>
+          <td>CM</td>
+          <td>2025–2026</td>
+        </tr>
+        <tr>
+          <td>Statistique descriptive</td>
+          <td><span class="level-badge level-l3">L3</span></td>
+          <td>TD</td>
+          <td>2026–</td>
+        </tr>
+        <tr>
+          <td>Probabilités &amp; Statistique</td>
+          <td><span class="level-badge level-l1">L1</span></td>
+          <td>TD</td>
+          <td>2025–2026</td>
+        </tr>
+        <tr>
+          <td>Outils Mathématiques</td>
+          <td><span class="level-badge level-l1">L1</span></td>
+          <td>TD</td>
+          <td>2024–2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════ CONTACT ════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Get in touch</div>
+      <h2>Contact</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <p class="contact-text">
+        Feel free to reach out for any questions about my work,
+        potential collaborations, or scientific exchanges.
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:thierry-emeric.gbaguidi@math.u-bordeaux.fr">
+          <span class="cl-icon">✉️</span>
+          <div>
+            <div class="cl-label">Professional email</div>
+            <div class="cl-value">thierry-emeric.gbaguidi@math.u-bordeaux.fr</div>
+          </div>
+        </a>
+        <div class="contact-link" style="cursor:default;">
+          <span class="cl-icon">📍</span>
+          <div>
+            <div class="cl-label">Office</div>
+            <div class="cl-value">202a, IMB - Bât. A33 - 351 Cours de la Libération, 33405 Talence</div>
+          </div>
+        </div>
+      </div>
+      <div class="social-grid">
+        <a class="social-btn" href="https://github.com/emericgbaguidi?tab=repositories" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          GitHub
+        </a>
+        <a class="social-btn" href="https://scholar.google.com/citations?user=qOuubDQAAAAJ&hl=fr&oi=ao" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+          Google Scholar
+        </a>
+        <a class="social-btn" href="https://www.math.u-bordeaux.fr/" target="_blank">🏛 IMB</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ FOOTER ═════════════════════════ -->
+<footer>
+  <p>
+    © 2026 Eméric Gbaguidi ·
+    <a href="https://www.math.u-bordeaux.fr/" target="_blank">Institut de Mathématiques de Bordeaux</a> ·
+    Last updated: 2026
+  </p>
+</footer>
+
+<!-- ════════════════════════ THEME SCRIPT ═══════════════════ -->
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  // Restore saved preference
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initial = saved ?? (prefersDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', initial);
+  btn.textContent = initial === 'dark' ? '☀️' : '🌙';
+
+  btn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    try { localStorage.setItem('theme', next); } catch(_) {}
+  });
+</script>
+
+</body>
 </html>
